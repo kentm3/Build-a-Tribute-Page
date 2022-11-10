@@ -1,0 +1,522 @@
+Build a Tribute Page
+
+    
+  <style> 
+  
+  .container{
+  grid-template-areas: 
+  "banner"
+  "content1"
+  "content2"
+  "content3";
+  grid-template-rows:
+  70px
+  200px
+  800px
+  1200px;
+  grid-template-columns:
+  auto
+  auto
+  auto
+  auto;
+  height:2230px
+  }
+  
+  .banner{
+  grid-area: banner;
+  width:100%;
+  height: 70px;
+  display:grid;
+  grid-template-areas:
+  "bannerleft bannerright";
+  grid-template-columns:
+  1fr 1fr;
+  background:black;
+  margin:-8 0 20 0;
+  }
+  
+  .bannerleft{
+  grid-area: bannerleft;
+  width:155px;
+  display:grid;
+  grid-template-areas:
+  "diamond FCC FCC"
+  "diamond free Follow";
+  grid-template-columns:
+  55px 123px 80px;
+  grid-template-rows:
+  35px;
+  35px;
+  margin: 0 0 0 0;
+  }
+  
+  .diamond{
+  grid-area: diamond;
+  width: 40px;
+  height:40px;
+  background:black;
+  padding:6 0 0 3; 
+  }
+  
+  .FCC{
+  grid-area: FCC;
+  width:  180px;
+  height: 35px;
+  background:black; 
+  color:white;
+  font-size: 22px;
+  font-weight: bold; 
+  padding: 7 0 0 0;
+  }
+  
+  .free{
+  grid-area: free;
+  width: 120px;
+  height: 35px;
+  background:black;
+  color: darkgray;  
+  }
+  
+.Follow{
+   background: green;
+   width:60px;
+   height:20px;
+   border-radius:2px;
+   margin: 0 0 0 10;
+   padding:2 0 0 5;
+   font-size:15px;
+   text-decoration:none;
+   color:white;
+   
+ }
+  
+  
+  .bannerright{
+  grid-area:bannerright;
+  width: 100%;
+  display:grid;
+  grid-template-areas:
+  "Like View Sign Log";
+  grid-template-columns:
+  55px 125px 100px 85px;
+  grid-gap:15px;
+  padding: 10 0 10 0;
+  justify-content:right;
+  }
+  
+.Like{
+    background-color: green;
+    display:flex;
+    justify-content:flex-end;
+    width:60;
+    border-radius:4px;
+    display: flex;
+    align-items: center;
+    text-decoration:none;
+    color:white;
+    
+  }
+ 
+ 
+ 
+  .View{
+    background-color: gray;
+    width:135;
+    border-radius:4px;
+    display: flex;
+    align-items: center;
+    text-decoration:none;
+   color:white;
+  }
+ 
+  .Sign{
+    background-color: green;
+    width:110;
+    border-radius:4px;
+    display: flex;
+    align-items: center;
+    text-decoration:none;
+   color:white;
+  }
+ 
+  .Log{
+    background-color:gray;
+    border-radius:4px;
+    display: flex;
+    align-items: center;
+    text-decoration:none;
+   color:white;
+  }
+  	
+  .content1{
+  grid-template-areas:
+  "content1col1 content1col2 content1col3";
+  grid-template columns:
+  15px auto 15px; 
+  background:lightgray;
+  height:200px;
+  text-align:center;
+  margin: 0 10 0 10;
+  }
+  
+  .content1col1{
+  background:lightgray;
+  width:15px;
+  }
+  
+  
+  
+  .content1col2{
+  background:lightgray;
+  text-align:center; 
+  font-size:20px;
+  width:auto;
+  }
+  
+  .content1col3{
+  background:lightgray;
+  width:15px; 
+  }
+  
+  .content2{
+  display:grid; 
+  grid-template-areas: 
+  "content2col1 content2col2 content2col3";
+  grid-template-columns: 
+  15px auto 15px; 
+  background:lightgray;
+  height:800px;
+  margin: 0 10 0 10;
+  }
+  
+  
+  .content2col1{
+  background:lightgray;
+  width:15px;
+  }
+  
+  
+  
+  .content2col2{
+  background:white;
+  text-align:center; 
+  padding:20 0 0 0; 
+  font-size:20px;
+  width:auto;
+  }
+  
+  .img{
+  width: 1135px; 
+  }
+  
+  
+  
+  .content2col3{
+  background:lightgray;
+  width:15px; 
+  }
+  
+  .content3{
+  grid-area:content3;
+  height:1200px;
+  display: grid;
+  grid-template-areas:
+  "content3col1";
+  grid-template columns:
+  auto; 
+  grid-template-rows:
+  background:lightgray;
+  margin: 0 10 0 10;
+  text-align:center;
+  }
+  
+ 
+  
+  .content3col1{
+  grid-area:content3col1; 
+  width:100%;
+  background:lightgray;
+  text-align:center;
+  justify-content:center;
+  padding:20 0 0 0;
+  font-size:20px;
+  }
+ 
+  ul{
+  width:700px;
+  text-align:left;
+  list-style-position: inside;
+  background:lightgray;
+  justify-content:center;
+  margin:0 auto 0 auto;
+  } 
+ 
+ 
+  
+  @media(max-width:1250px){
+  .container{
+  grid-template-areas: 
+  "banner"
+  "content1"
+  "content2"
+  "content3";
+  grid-template-rows:
+  60px
+  200px
+  auto
+  auto;
+  grid-template-columns:
+  auto
+  auto
+  auto
+  auto;
+  height:2000px
+  }
+  
+  .banner{
+  grid-area: banner;
+  width:100%;
+  height: 70px;
+  display:grid;
+  grid-template-areas:
+  "bannerleft bannerright";
+  grid-template-columns:
+  1fr 1fr;
+  background:black;
+  margin:-8 0 20 0;
+  }
+  
+  .content1{
+  display:grid;
+  grid-template-areas:
+  "content1col1 content1col2 content1col3";
+  grid-template columns:
+  17px auto 17px; 
+  background:lightgray;
+  height:200px;
+  text-align:center;
+  width: auto;
+  margin:0 .25% 0 .25%;
+  }
+  
+  .content1col1{
+  background-color:lightgray;
+  width:17px;
+  }
+  
+  .content1col2{
+  background:lightgray;
+  text-align:center; 
+  padding:1% 1% 1% 1%; 
+  font-size:20px;
+  width:96%
+  }
+  
+  .content1col3{ 
+  background-color:lightgray;  
+  width:17px;
+  }
+  
+  
+  .content2{
+  display:grid; 
+  grid-template-areas: 
+  "content2col1 content2col2 content2col3";
+  grid-template-columns: 
+  17px auto 17px; 
+  background:lightgray;
+  height:auto;
+  margin:0 .25% 0 .25%;
+  }
+  
+  .content2col1{
+  background:lightgray;
+  width:17px;
+  }
+  
+  
+  
+  .content2col2{
+  background:white;
+  text-align:center; 
+  padding:1% 1% 1% 1%; 
+  font-size:20px;
+  width:auto;
+  }
+  
+  
+  .content2col3{
+  background:lightgray;
+  width:17px; 
+  }
+  
+  .img{
+  width:100%; 
+  }
+  
+.content3{
+  grid-area:content3;
+  width:auto;
+  height:1200px;
+  display: grid;
+  grid-template-areas:
+  "content3col1";
+  grid-template columns:
+  auto; 
+  grid-template-rows:
+  background:lightgray;
+  margin:0 .25% 0 .25%;
+  text-align:center;
+  }
+  
+ 
+  
+  .content3col1{
+  grid-area:content3col1; 
+  width:100%;
+  background:lightgray;
+  text-align:center;
+  justify-content:center;
+  padding:20 0 0 0;
+  font-size:20px;
+  }
+ 
+  ul{
+  width:700px;
+  text-align:left;
+  list-style-position: inside;
+  background:lightgray;
+  justify-content:center;
+  margin:0 auto 0 auto;
+  } 
+ 
+  
+  
+  </style> 
+  
+<section class="container"> 
+    
+<section class="banner">
+<section class="bannerleft">  
+<section class="diamond"> <img class="diamond" src="https://logodix.com/logo/12112.png">
+</section>
+<section class="FCC"> FCC: Tribute Page</section>  
+<a href="freeCodeCamp.org" class="free">freeCodeCamp.org </a> 
+<a href="https://codepen.io/Login?" class="Follow"> + Follow
+</a>
+</section>
+<section class="bannerright"> 
+<a href="https://codepen.io/Like" class="Like"> <div style="padding: 0 15 0 0;"> Like </div> </a> 
+<a href="https://codepen.io/freeCodeCamp/pen/VPaoNP" class="View"> <div style="padding: 0 0 0 16;"> View in Editor</div> </a> 
+<a href="https://codepen.io/accounts/Signup/user/free"class="Sign"><div style="padding: 0 0 0 25;"> Sign Up </div> </a> 
+<a href="https://codepen.io/Login"class="Log"> <div style="padding: 0 0 0 25;"> LogIn </div> </a> 
+</section>   
+</section> 
+ 
+<section class="content1"> 
+<section class="content1col1"> </section>
+<section class="content1col2">  
+<header style="font-size:45px; font-weight:bold; padding: 70 0 0 0;"> Dr. Norman Borlaug </header>
+<article style="font-size:20px; padding: 30 0 0 0;"> The man who saved a billion lives </article> 
+</section>
+<section class="content1col3"> </section>
+</section>
+ 
+<section class="content2">
+<section class="content2col1"></section> 
+<section class="content2col2"> <img class="img" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute-page-main-image.jpg"> 
+<br>  Dr. Norman Borlaug, third from the left, trains biologists in Mexico on how to increase wheat yields - part of his life-long war on hunger.
+</section> 
+<section class="content2col3"></section> 
+</section>
+  
+<section class="content3">
+<section class="column1c"> </section> 
+<section class="content3col1"> 
+<header style="font-size:23px;font-weight:bold;"> Here's a time line of Dr. Borlaug's life:</header> 
+<ul> 
+<br> 
+<li> <strong> 1914 </strong> - Born in Cresco, Iowa </li>
+<br> 
+<li> <strong>1933 </strong> - Leaves his family's farm to attend the University of Minnesota, thanks to a Depression era program known as the "National Youth Administration" </li><br> 
+<li> <strong> 1935</strong> - Has to stop school and save up more money. Works in the Civilian Conservation Corps, helping starving Americans. "I saw how food changed them", he said. "All of this left scars on me."  </li><br> 
+<li> <strong> 1937</strong>- Finishes university and takes a job in the US Forestry Service  </li><br> 
+<li> <strong>1938 </strong>- Marries wife of 69 years Margret Gibson. Gets laid off due to budget cuts. Inspired by Elvin Charles Stakman, he returns to school study under Stakman, who teaches him about breeding pest-resistent plants.  </li><br> 
+<li> <strong>1941  </strong>- Tries to enroll in the military after the Pearl Harbor attack, but is rejected. Instead, the military asked his lab to work on waterproof glue, DDT to control malaria, disinfectants, and other applied science.  </li><br> 
+<li> <strong>1942 </strong> - Receives a Ph.D. in Genetics and Plant Pathology </li><br> 
+<li> <strong>1944 </strong>- Rejects a 100% salary increase from Dupont, leaves behind his pregnant wife, and flies to Mexico to head a new plant pathology program. Over the next 16 years, his team breeds 6,000 different strains of disease resistent wheat - including different varieties for each major climate on Earth. </li><br> 
+<li> <strong>1945 </strong> - Discovers a way to grown wheat twice each season, doubling wheat yields </li><br> 
+<li> <strong>1953 </strong>- crosses a short, sturdy dwarf breed of wheat with a high-yeidling American breed, creating a strain that responds well to fertilizer. It goes on to provide 95% of Mexico's wheat.  </li><br> 
+<li> <strong>1962  </strong> - Visits Delhi and brings his high-yielding strains of wheat to the Indian subcontinent in time to help mitigate mass starvation due to a rapidly expanding population </li><br> 
+<li> <strong>1970 </strong>- receives the Nobel Peace Prize  </li><br> 
+<li> <strong>1983 </strong>- helps seven African countries dramatically increase their maize and sorghum yields  </li><br> 
+<li> <strong>1984  </strong>- becomes a distinguished professor at Texas A&M University  </li><br> 
+<li> <strong>2005 </strong>- states "we will have to double the world food supply by 2050." Argues that genetically modified crops are the only way we can meet the demand, as we run out of arable land. Says that GM crops are not inherently dangerous because "we've been genetically modifying plants and animals for a long time. Long before we called it science, people were selecting the best breeds."  </li><br> 
+<li> <strong>2009  </strong>dies at the age of 95.  </li> <br> <br> <br>
+<i>"Borlaug's life and achievement are testimony to the far-reaching contribution that one man's towering intellect, persistence and scientific vision can make to human peace and progress."
+<br> <br>-- Indian Prime Minister Manmohan Singh</i> 
+</ul><br> <br> <br>
+ 
+<section class="column3c"> </section>If you have time, you should read more about this incredible human being on his <a href="https://en.wikipedia.org/wiki/Norman_Borlaug">Wikipedia entry.</a></section>   
+</section> 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
